@@ -1,0 +1,50 @@
+{
+    "button": [
+        {
+     
+			"type": "view", 
+            "name": "手机官网", 
+			 "url": "http://wx.yr202.com/" 
+        }, 
+        {
+            "name": "投资建议", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "行情走势", 
+                  "url": "http://wx.yr202.com/hangqing/"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "投资案例", 
+                   "url": "http://wx.yr202.com/anli/"
+                }, 
+                {
+                    "type": "view",  
+                    "name": "分析师说", 
+                    "url": "http://wx.yr202.com/analyst/"
+                }
+            ]
+        }, 
+        {
+            "name": "服务专区", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "人工客服", 
+                      "url": "http://wx.yr202.com/kehu/tel/"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "常见问题", 
+                      "url": "http://wx.yr202.com/kehu/liuyan/"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "软件下载", 
+                       "url": "http://wx.yr202.com/download/"
+                }
+            ]
+        }
+    ]
+}

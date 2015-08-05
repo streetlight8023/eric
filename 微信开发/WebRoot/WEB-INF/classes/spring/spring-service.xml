@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-autowire="byName" default-lazy-init="true">
+	
+	<bean id="weiXinService" class="com.yr.service.implement.WeiXinServiceImp"/>
+	<bean id="customerService" class="com.hs.mims.service.front.implement.CustomerServiceImp"/>
+	<bean id="focusPicService" class="com.hs.mims.service.product.implement.FocusPicServiceImp"/>
+	<bean id="submitChannelService" class="com.hs.mims.service.adv.implement.SubmitChannelServiceImp" />
+	<bean id="memberService" class="com.hs.mims.service.front.implement.MemberServiceImp" />
+	<bean id="onlineStateService" class="com.hs.mims.service.front.implement.OnlineStateServiceImp" />
+	<bean id="earnCaseService" class="com.hs.mims.service.front.implement.EarnCaseServiceImp" />
+	<bean id="newsService" class="com.hs.mims.service.front.implement.NewsServiceImp" />
+	<bean id="zhiboUserService" class="com.hs.mims.service.zhibo.implement.ZhiboUserServiceImp" />
+	<bean id="customService" class="com.hs.mims.service.front.implement.CustomServiceImp" />
+</beans>

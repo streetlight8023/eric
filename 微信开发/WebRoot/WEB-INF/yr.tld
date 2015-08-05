@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>yr</short-name>
+<!-- 	<uri>http://www.tjyrpm.com/yr</uri> -->
+	<uri>http://wx.yr202.com</uri>
+		<!--焦点图图片显示
+			1.首页* 
+	 		4.开户投资页面
+	 		3.加盟合作页面
+			-->
+	<tag>
+		<name>showFocusPicTag</name>
+		<tag-class>com.yr.web.action.tag.ShowFocusPicTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>type</name>
+			<required>flase</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>
+
+
+

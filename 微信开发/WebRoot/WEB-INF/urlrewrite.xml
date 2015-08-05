@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+	<!--
+		Configuration file for UrlRewriteFilter http://tuckey.org/urlrewrite/
+	-->
+<urlrewrite>
+	<rule>
+		<from>^/$</from>
+		<to type="forward">/index.jsp</to>
+	</rule>
+
+
+
+	<rule>
+		<from>^/wx_dl/$</from>
+		<to type="forward">/wxProxy.action</to>
+	</rule>
+	
+	<!-- 首页跳转开户 -->
+	<rule>
+		<from>^/kaihu/xinxi/$</from>
+		<to type="forward">/yr/account/accountSp1.jsp</to>
+	</rule>
+	
+	<!-- 首页跳转客户中心 -->
+	<rule>
+		<from>^/kehu/$</from>
+		<to type="forward">/yr/about/customer.jsp</to>
+	</rule>
+	
+	<!-- 行情走势 -->
+	<rule>
+		<from>^/hangqing/$</from>
+		<to type="forward">/yr/product/data.jsp</to>
+	</rule>
+	
+	<!-- 软件下载	 -->
+	<rule>
+		<from>^/download/$</from>
+		<to type="forward">/yr/about/downLoad.jsp</to>
+	</rule>
+	
+		<!-- 案例分析	 -->
+	<rule>
+		<from>^/anli/$</from>
+		<to type="forward">/investmentCase_getInvestmentCase.action</to>
+	</rule>
+	
+	<!-- 财经日历	 -->
+	<rule>
+		<from>^/rili/$</from>
+		<to type="forward">/yr/about/customer.jsp</to>
+	</rule>
+	
+	<!-- 分析师说	 -->
+	<rule>
+		<from>^/analyst/$</from>
+		<to type="forward">/analystData_getAnalysts.action</to>
+	</rule>
+	
+	<!-- 客服热线	 -->	
+	<rule>
+		<from>^/kehu/tel/$</from>
+		<to type="forward">/yr/about/consult.jsp</to>
+	</rule>
+	
+		<!-- 产品介绍	 -->	
+	<rule>
+		<from>^/kehu/product/$</from>
+		<to type="forward">/yr/product/p2.jsp</to>
+	</rule>
+	
+		<!-- 企业荣誉	 -->	
+	<rule>
+		<from>^/kehu/honour/$</from>
+		<to type="forward">/yr/about/honour.jsp</to>
+	</rule>
+	
+	
+		<!-- 易润活动（理财测试）	 -->	
+	<rule>
+		<from>^/kehu/huodong/$</from>
+		<to type="forward">/yr/about/test.jsp</to>
+	</rule>
+	
+		<!-- 客户QA	 -->	
+	<rule>
+		<from>^/kehu/liuyan/$</from>
+		<to type="forward">/FAQ_queryQuestionNewsPage.action</to>
+	</rule>	
+	
+		<!-- 关于我们	 -->	
+	<rule>
+		<from>^/kehu/yirun/$</from>
+		<to type="forward">/yr/about/about.jsp</to>
+	</rule>	
+	
+		<!-- 开户信息1-1	 -->	
+	<rule>
+		<from>^/kaihu/xinxi/$</from>
+		<to type="forward">/yr/account/accountSp1.jsp</to>
+	</rule>	
+	
+		<!-- 开户签约1-2	 -->	
+	<rule>
+		<from>^/kaihu/xieyi/$</from>
+		<to type="forward">/yr/account/accountSp2.jsp</to>
+	</rule>	
+	
+		<!-- 开户绑定1-3	 -->	
+	<rule>
+		<from>^/kaihu/qianyue/$</from>
+		<to type="forward">/yr/account/accountSp3.jsp</to>
+	</rule>	
+	
+		<!-- 开户激活1-4	 -->	
+	<rule>
+		<from>^/kaihu/jihuo/$</from>
+		<to type="forward">/yr/account/accountSp5.jsp</to>
+	</rule>	
+	
+		<!-- 分析师甲	 -->	
+	<rule>
+		<from>^/analyst/celv_([0-9]+)(.*)\.html$</from>
+		<to type="forward">/morningCommens_getAnalystComments.action?id=$1</to>	
+	</rule>	
+	
+	<!-- 产品	 -->
+	<rule>
+		<from>^/kehu/product/page/$</from>
+		<to type="forward">/yr/about/consult.jsp</to>
+	</rule>	
+	
+</urlrewrite>
+

@@ -1,0 +1,34 @@
+AppID(应用ID)wx1f0e15cc63106c6a
+AppSecret(应用密钥)708e5a8228926be796ef7c13bfb0f9fa 
+
+
+微信 公共 账号*******
+密码*******
+
+
+    "access_token": "fzyUPEaOA7M1tJjVL6aswKa54Snh09w_YNM8il8up4QvfRWQreVfEnMjAWM1M8XLe4oGY7YxD1ow85uQ4mPJHLbkItPVOEF4dFKz-22nNOU", 
+    "expires_in": 7200
+
+    "access_token": "aH4PjbN0kpmD0_UojC_z8r_Yt7d32wUawXQ6A7p8hfFLNA-eoABJo3CyJcLsMHlGe6FIP_crLUyoOhxxTxZfAuSxaXeTJ6aiqM274QP9RLs", 
+    "expires_in": 7200
+
+{"access_token":"6JHvOsUg5wcTCWPLcBcfP3UngLcNzwegw_cda9nFoJta6SuaEdpZHvtj43F-WtOmvLJyTGDaxN2YY1FB_mtsL19fyFe4fnnZxcjcg0b0qv0","expires_in":7200}
+{"access_token":"ahqE0uUvDORwBDQaDsp3zpS23dy774Ve-KyNyf7r49omx_AI3mOAuTBfvaVGaCHqcTmA92cpk3ONEikf2clyxyNJmXILBTNoqCrz-VIB0Es","expires_in":7196}
+
+https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx1f0e15cc63106c6a&secret=708e5a8228926be796ef7c13bfb0f9fa
+
+现网url
+http://wx.yr202.com/weiXinInfoProxy.action
+
+yr202_wx_hangz_werttyhhjkmnbnvbc
+
+本地url
+http://192.168.1.185/wx/weiXinInfoProxy.action
+https://streetlight8023.pagekite.me/wx/weiXinInfoProxy.action
+
+yr202_wx_hangz_yr
+
+https://streetlight8023.pagekite.me/weiXinInfoProxy.action
+
+
+0879

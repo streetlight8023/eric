@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <!-- 允许action的名字中出现"/" -->
+    <constant name="struts.enable.SlashesInActionNames" value="true"/>
+    <constant name="struts.devMode" value="false" />
+    <package name="default" namespace="/" extends="struts-default" >
+       <!--  <global-results>
+            <result name="exception">/error.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping result="exception" exception="java.lang.Exception"/>
+        </global-exception-mappings> -->
+    </package>
+	<include file="mims/yr-struts.xml" />
+</struts>

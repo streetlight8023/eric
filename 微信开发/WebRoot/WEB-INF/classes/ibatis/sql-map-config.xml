@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+ <sqlMap resource="com/hs/dolphin/dao/ibatis/maps/SysUser.xml" />
+ <sqlMap resource="com/hs/mims/dao/front/ibatis/maps/Customer.xml" />
+ <sqlMap resource="com/hs/mims/dao/product/ibatis/maps/FocusPic.xml" />
+ <sqlMap resource="com/hs/mims/dao/adv/ibatis/maps/SubmitChannel.xml" />
+ <sqlMap resource="com/hs/mims/dao/front/ibatis/maps/Member.xml" />
+ <sqlMap resource="com/hs/mims/dao/front/ibatis/maps/OnlineState.xml" />
+ <sqlMap resource="com/hs/mims/dao/front/ibatis/maps/OpenAccountLogs.xml" />
+ <sqlMap resource="com/hs/mims/dao/front/ibatis/maps/EarnCase.xml" />
+ <sqlMap resource="com/hs/mims/dao/front/ibatis/maps/CompanyNews.xml" />
+ <sqlMap resource="com/hs/mims/dao/zhibo/ibatis/maps/ZhiboUser.xml" />
+ <sqlMap resource="com/hs/mims/dao/front/ibatis/maps/CustomService.xml" />
+</sqlMapConfig>

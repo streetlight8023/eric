@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.0.xsd">
+
+	<bean id="baseConfigObj"
+		class="com.hs.mims.utils.BaseConfigObj" scope="singleton">
+				<property name="openAccountMap">
+				<map>
+					<entry key="-1" value="开户失败"></entry>
+					<entry key="-100" value="会员编号不合法"></entry>
+					<entry key="-10000" value="请求超时，请稍后重试"></entry>
+					<entry key="-101" value="证件号不合法"></entry>
+					<entry key="-102" value="省市县/区 应为中文"></entry>
+					<entry key="-103" value="交易密码不合法"></entry>
+					<entry key="-104" value="交易账号已存在"></entry>
+					<entry key="-105" value="会员不存在"></entry>
+					<entry key="-106" value="交易账号不合法"></entry>
+					<entry key="-107" value="邮箱不合法"></entry>
+					<entry key="-108" value="传真或电话不合法"></entry>
+					<entry key="-109" value="邮政编号不合法"></entry>
+					<entry key="-110" value="客户名称不合法"></entry>
+					<entry key="-111" value="证件类型不合法"></entry>
+					<entry key="-112" value="证件号码和证件类型在此会员下已存在"></entry>
+					<entry key="-113" value="交易核心未找到会员"></entry>
+					<entry key="-114" value="当前市场状态不允许操作"></entry>
+					<entry key="-115" value="会员状态不正确"></entry>
+					<entry key="-119" value="地址不合法"></entry>
+					<entry key="-120" value="居间号不合法"></entry>
+					<entry key="-121" value="机构号不合法"></entry>
+					<entry key="-122" value="电话不合法"></entry>
+					<entry key="-123" value="电话密码不合法"></entry>
+					<entry key="-124" value="机构不存在或者不属于该会员"></entry>
+					<entry key="-125" value="居间不存在或不属于该机构或不属于该会员"></entry>
+					<entry key="-199" value="频率验证参数不正确"></entry>
+					<entry key="-2" value="会员开户接口异常"></entry>
+					<entry key="-200" value="同一证件开户过去频繁"></entry>
+					<entry key="-20020" value="银行返回，客户证件与开户时不符"></entry>
+					<entry key="-20021" value="参数错误"></entry>
+					<entry key="-20023" value="交易账号未签约"></entry>
+					<entry key="-20024" value="非法银行账号"></entry>
+					<entry key="-20025" value="非法交易账号"></entry>
+					<entry key="-20026" value="交易账号被禁用"></entry>
+					<entry key="-20027" value="交易账号和账号对应关系错误"></entry>
+					<entry key="-20028" value="数据库异常"></entry>
+					<entry key="-20029" value="系统异常"></entry>
+					<entry key="-20032" value="非法交易账号代码"></entry>
+					<entry key="-20033" value="数据库异常"></entry>
+					<entry key="-201301" value="开户信息不完整或格式错误"></entry>
+					<entry key="-201302" value="通讯标识不存在或未开通，不允许开户"></entry>
+					<entry key="-201303" value="会员单位不存在"></entry>
+					<entry key="-201304" value="用户保存或更新错误，请联系管理员"></entry>
+					<entry key="-201305" value="只能支持证件类型为 2 的身份证"></entry>
+					<entry key="-201306" value="实盘账户已存在"></entry>
+					<entry key="-201307" value="实盘账户保存出错，请联系管理员"></entry>
+					<entry key="-201308" value="实盘账号已使用"></entry>
+					<entry key="-201309" value="用户账户已锁定，请联系管理员"></entry>
+					<entry key="-201310" value="该客户在该会员单位已开模拟盘账户"></entry>
+					<entry key="-201311" value="模拟盘账户保存出错，请联系管理员"></entry>
+					<entry key="-201312" value="模拟盘账号已被占用，请更换账号重试"></entry>
+					<entry key="-201313" value="身份证格式不正确或未满18岁"></entry>
+					<entry key="-201314" value="用户名格式不正确"></entry>
+					<entry key="-201315" value="用户名已被占用"></entry>
+					<entry key="-201316" value="用户名不存在"></entry>
+					<entry key="-201317" value="客户所属会员单位不匹配"></entry>
+					<entry key="-201318" value="客户注册信息不完整或长度错误"></entry>
+					<entry key="-201319" value="通讯标识不存在或未开通，不允许注册(会员单位开通实盘或模拟盘才能注册)"></entry>
+					<entry key="-201320" value="读取开户结果超时，请求中断，请稍后再试"></entry>
+					<entry key="-201321" value="手机号码不合法"></entry>
+					<entry key="-201322" value="邮政编码不合法"></entry>
+					<entry key="-201323" value="邮箱不合法"></entry>
+					<entry key="-201324" value="地址长度不符合要求"></entry>
+					<entry key="-201325" value="交易密码不合法"></entry>
+					<entry key="-201326" value="电话密码不合法"></entry>
+					<entry key="-201327" value="居间编号不合法"></entry>
+					<entry key="-201328" value="机构编号不合法"></entry>
+					<entry key="-201330" value="客户姓名格式不正确"></entry>
+					<entry key="-201509" value="操作过于频繁，请稍后重试"></entry>
+					<entry key="-201401" value="银行卡校验超过限制次数（3次及以上）"></entry>
+					<entry key="-201402" value="会员单位未开通此银行的验证功能,请联系管理员!"></entry>
+					<entry key="-201403" value="实盘开户错误,请联系管理员!"></entry>
+					<entry key="-201405" value="已校验过银行卡！"></entry>
+					<entry key="-201501" value="会员账号格式错误，必须为数字!"></entry>
+					<entry key="-201502" value="会员账号和会员单位不相符!"></entry>
+					<entry key="-201503" value="今天是非业务办理日，网上开户平台不支持开户业务的办理与查询，请在业务办理日进行操作"></entry>
+					<entry key="-201504" value="开户token和会员实盘编号不一致"></entry>
+					<entry key="-201505" value="开户token和会员模拟盘编号不一致"></entry>
+					<entry key="-201506" value="实盘账号不存在"></entry>
+					<entry key="-300" value="银行卡验证信息不完整"></entry>
+					<entry key="-30007" value="银行返回: 客户银行账号异常"></entry>
+					<entry key="-301" value="查询过于频繁，请稍后重试"></entry>
+					<entry key="-302" value="未查询到资金帐号信息"></entry>
+					<entry key="-303" value="交易账号不合法"></entry>
+					<entry key="-304" value="币种代码不合法"></entry>
+					<entry key="-305" value="账号类别不合法"></entry>
+					<entry key="-306" value="证件类别不合法"></entry>
+					<entry key="-307" value="证件号码不合法"></entry>
+					<entry key="-308" value="客户名称不合法"></entry>
+					<entry key="-309" value="国别代码不合法"></entry>
+					<entry key="-310" value="客户性别不合法"></entry>
+					<entry key="-311" value="推荐人编号不合法"></entry>
+					<entry key="-312" value="银行分行号不合法"></entry>
+					<entry key="-313" value="银行代码字段不合法"></entry>
+					<entry key="-314" value="合作方机构号不合法"></entry>
+					<entry key="-315" value="环境为模拟盘(只在实盘下可用)"></entry>
+					<entry key="-316" value="交易账号不存在"></entry>
+					<entry key="-317" value="银行账号不合法"></entry>
+					<entry key="-318" value="未找到与银行代码匹配的银行"></entry>
+					<entry key="-40001" value="银行账号注册:信息不完整"></entry>
+					<entry key="-40002" value="银行账号注册:交易账号不存在"></entry>
+					<entry key="-40003" value="银行账号注册:银行不存在"></entry>
+					<entry key="-40004" value="银行账号注册:账号已注册"></entry>
+					<entry key="-40005" value="银行账号注册:银行签约失败"></entry>
+					<entry key="-40006" value="银行账号注册:数据库操作失败"></entry>
+					<entry key="-40007" value="银行账号注册:系统异常"></entry>
+					<entry key="-40008" value="交易账号密码错误"></entry>
+					<entry key="-40009" value="客户已终止"></entry>
+					<entry key="-40019" value="客户状态不正确"></entry>
+					<entry key="-40026" value="不存在的客户"></entry>
+					<entry key="-40035" value="预签约失败"></entry>
+					<entry key="-40036" value="未预签约"></entry>
+					<entry key="-40037" value="证件信息匹配，账号状态异常"></entry>
+					<entry key="-40038" value="证件信息不匹配，账号状态正常"></entry>
+					<entry key="-40039" value="证件信息不匹配且账号状态不正常"></entry>
+					<entry key="-500014" value="同步交易账号：数据库异常，请检查！"></entry>
+					<entry key="-50004" value="不在转账时间内"></entry>
+					<entry key="-50005" value="连接服务器超时"></entry>
+					<entry key="-50010" value="银行返回数据包为空"></entry>
+					<entry key="-50011" value="发送数据IO异常"></entry>
+					<entry key="-710001" value="银行账号被锁定"></entry>
+					<entry key="-910002" value="密码错误"></entry>
+					<entry key="-920000" value="处理器获取适配器失败"></entry>
+					<entry key="-920001" value="银行返回其他错误"></entry>
+					<entry key="-920003" value="当前不是交易日期"></entry>
+					<entry key="-920004" value="未到交易时间"></entry>
+					<entry key="-920005" value="交易时间已过"></entry>
+					<entry key="-920006" value="系统出现异常情况，交易被禁止"></entry>
+					<entry key="-920008" value="流水号冲突"></entry>
+					<entry key="-920009" value="流水已经有人处理"></entry>
+					<entry key="-920010" value="交易账号异常"></entry>
+					<entry key="-920011" value="银行编号异常"></entry>
+					<entry key="-920012" value="银行账号异常"></entry>
+					<entry key="-920013" value="未查询到交易账号信息"></entry>
+					<entry key="-920014" value="查询到交易账号信息重复"></entry>
+					<entry key="-920015" value="数据库异常"></entry>
+					<entry key="-920016" value="系统异常"></entry>
+					<entry key="-8001" value="该银行未开通银行卡验证功能"></entry>
+					<entry key="-920017" value="银行被禁用"></entry>
+					<entry key="-930000" value="本笔交易已经受理"></entry>
+					<entry key="0" value="通讯异常"></entry>
+					<entry key="1" value="开户成功"></entry>
+				</map>
+               </property>
+	
+	          <property name="fromPageMap">
+               <map>
+                 <entry key="/index.jsp" value="首页" ></entry>
+                 <entry key="/yr/product/product.jsp" value="产品页" ></entry>
+                 <entry key="/yr/product/modelTong.jsp" value="产品详情页" ></entry>
+                 <entry key="/yr/product/modelBaj.jsp" value="产品详情页" ></entry>
+                 <entry key="/yr/product/modelBoj.jsp" value="产品详情页" ></entry>
+                 <entry key="/yr/product/modelBy.jsp" value="产品详情页" ></entry>
+                 <entry key="/yr/product/modelLv.jsp" value="产品介绍情页" ></entry>
+                 <entry key="/yr/product/modelNie.jsp" value="产品详情页" ></entry>
+                 <entry key="/yr/extend/extend.jsp" value="广告页-1" ></entry>
+                 <entry key="/yr/profit/profit.jsp" value="盈利页" ></entry>
+                 <entry key="/yr/khonline/yykh.jsp" value="预约页" ></entry>
+                 <entry key="/yr/khonline/mnkh.jsp" value="模拟页" ></entry>
+                 <entry key="/yr/khonline/kh.jsp" value="实盘页" ></entry>
+                 <entry key="/yr/khonline/kh-online.jsp" value="实盘二页" ></entry>
+                 <entry key="/yr/extend/fein.jsp" value="广告页(非农页)-2" ></entry>
+                 <entry key="/mobile/tg_1.jsp" value="广告页(手机页面预约)-1" ></entry>
+                  <entry key="/mobile/miniMobile.jsp" value="广告页(手机页面模拟)-1" ></entry>
+                  <entry key="/yr/extend/ad.jsp" value="广告页(股票广告)-3" ></entry>
+                 
+               </map>
+               </property>
+	
+	</bean>
+</beans>
