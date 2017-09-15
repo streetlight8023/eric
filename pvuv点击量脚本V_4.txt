@@ -1,0 +1,21 @@
+dateMark=`date -d last-day +%Y%m%d`
+fileNum='&t=20003&'
+clickNum='&t=20005&'
+Date=`date -d last-day +%Y%m%d`
+fileName=/home/admin/logs/nginx/"$Date"-access_log-m.dian.so
+indexPV=$(awk /"$fileNum"/  "$fileName" | awk -F 'h5rid\%22\%3A\%22' '{print $2}' | awk -F '\%22%2C\%22' '{print $1}' | awk -F '_' '$2=="%2F" && $2!=null &&$2!=""  {print $2}'| wc -l);
+desktopChargePV=$(awk /"$fileNum"/  "$fileName" | awk -F 'h5rid\%22\%3A\%22' '{print $2}' | awk -F '\%22%2C\%22' '{print $1}' | awk -F '_' '$2=="%2FdesktopCharger%2Fcharging" && $2!=null &&$2!="" {print $2}'| wc -l);
+mapPV=$(awk /"$fileNum"/  "$fileName" | awk -F 'h5rid\%22\%3A\%22' '{print $2}' | awk -F '\%22%2C\%22' '{print $1}' | awk -F '_' '$2=="%2Fmap" && $2!=null &&$2!=""  {print $2}'| wc -l);
+indexUV=$(awk /"$fileNum"/ "$fileName" | awk -F 'h5rid\%22\%3A\%22' '{print $2}' | awk -F \| '{print $1}' | awk -F '%22%2C%22' '$1=="m_%2F"{print $0}' | awk -F 'hcSid%22%3A%22' '{print $2}' | sort -r |uniq -c |wc -l)
+mapUV=$(awk /"$fileNum"/ "$fileName" | awk -F 'h5rid\%22\%3A\%22' '{print $2}' | awk -F \| '{print $1}' | awk -F '%22%2C%22' '$1=="m_%2Fmap"{print $0}' | awk -F 'hcSid%22%3A%22' '{print $2}' | sort -r |uniq -c |wc -l)
+desktopChargeUV=$(awk /"$fileNum"/ "$fileName" | awk -F 'h5rid\%22\%3A\%22' '{print $2}' | awk -F \| '{print $1}' | awk -F '%22%2C%22' '$1=="m_%2FdesktopCharger%2Fcharging"{print $0}' | awk -F 'hcSid%22%3A%22' '{print $2}' | sort -r |uniq -c |wc -l)
+indextotalClickCount=$(awk /"$clickNum"/ "$fileName"  | awk -F 'h5click\%22\%3A\%22' '{print $2}' | awk -F '\%22%2C\%22' '{print $1}' |awk -F '_' '$2=="%2F" && $2!="" && $3!=null''{print $3}' | sort -r |wc -l)
+maptotalClickCount=$(awk /"$clickNum"/ "$fileName"  | awk -F 'h5click\%22\%3A\%22' '{print $2}' | awk -F '\%22%2C\%22' '{print $1}' |awk -F '_' '$2=="%2Fmap" && $2!="" && $3!=null''{print $3}' | sort -r |wc -l)
+chargetotalClickCount=$(awk /"$clickNum"/ "$fileName"  | awk -F 'h5click\%22\%3A\%22' '{print $2}' | awk -F '\%22%2C\%22' '{print $1}' |awk -F '_' '$2=="%2FdesktopCharger%2Fcharging" && $2!="" && $3!=null''{print $3}' | sort -r |wc -l)
+totlClickCount=$(awk /"$clickNum"/ "$fileName"  | awk -F 'h5click\%22\%3A\%22' '{print $2}' | awk -F '\%22%2C\%22' '{print $1}' |awk -F '_' '$3!="" && $3!=null''{print $3}' | sort -r |wc -l)
+indexcleanClickCount=$(awk /"$clickNum"/ "$fileName" | awk -F 'h5click\%22\%3A\%22' '{print $2}' | awk -F '%3D%22%7D' '{print $1}' | awk -F '%22%2C%22' '$1=="m_%2F_1_0" {print $2}'| sort -r |uniq -c |wc -l)
+chargecleanClickCount=$(awk /"$clickNum"/ "$fileName" | awk -F 'h5click\%22\%3A\%22' '{print $2}' | awk -F '%3D%22%7D' '{print $1}' | awk -F '%22%2C%22' '$1=="m_%2FdesktopCharger%2Fcharging_1_0" {print $2}'| sort -r |uniq -c |wc -l)
+mapCleanCount=$(awk /"$clickNum"/ "$fileName" | awk -F 'h5click\%22\%3A\%22' '{print $2}' | awk -F '%3D%22%7D' '{print $1}' | awk -F '%22%2C%22' '$1=="m_%2Fmap_1_0" {print $2}'| sort -r |uniq -c |wc -l)
+str="$Date"-access_log-default
+#str2=/home/admin/logs/nginx/"$date2"-access_log-default
+/bin/echo $dateMark indexPV = $indexPV desktopChargePV = $desktopChargePV mapPV = $mapPV indexUV = $indexUV desktopChargeUV = $desktopChargeUV mapUV = $mapUV  indextotalClickCount = $indextotalClickCount chargetotalClickCount = $chargetotalClickCount maptotalClickCount = $maptotalClickCount indexcleanClickCount = $indexcleanClickCount chargecleanClickCount = $chargecleanClickCount mapCleanCount = $mapCleanCount>> /home/admin/logs/nginx/crontime.txt
